@@ -4,3 +4,5 @@ print("hello world")
 
 
 print("hrllo")
+
+print("push error")
