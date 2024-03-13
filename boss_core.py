@@ -43,6 +43,13 @@ def turn_logic():
     for i in range(len(roll_loss)):
         print(roll_loss[i] , end="")
     print("")
+    
+    # if Player_die > Boss_Die:
+#         print("You win the turn.")
+#         boss_health = boss_health - player_damage
+#     else:
+#         print("You lost the turn.")
+#         player_health = player_health - boss_damage
 
 
 def boss_intro():
