@@ -52,15 +52,13 @@ def boss():
     print("BOSS rolled a", boss_roll)
    
 
-    run = 1
-
-
-        
-    if player_health == 0:
+    run = True
+   
+    if player_health <= 0:
             print("Game Over.")
-            run = 0
+            run = False
 
-    if boss_health == 0:
+    if boss_health <= 0:
             print("You Win.")
             print("I'll be back.")
         
