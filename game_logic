@@ -11,27 +11,31 @@ while(run):
     if boss_core.player_health <= 0:
         print("Game Over.")
         run = False
+        exit(0)
     
     if boss_core.boss_health <= 0:
         print("You Win.")
         print("I'll be back.")
+        exit(0)
             
     if boss_core.player_damage == boss_core.boss_damage:
         print("Parry!")
     
     print("Do you wish to continue?")
     x = input()
-    print(x)
+    #print(x)
 
-    if boss_core.Player_die > boss_core.boss_roll:
+    if boss_core.Player_die > boss_core.Boss_Die:
         print("You win the turn.")
         boss_core.boss_health = boss_core.boss_health - boss_core.player_damage
+        print("You did", boss_core.player_damage,"damage")
     else:
         print("You lost the turn.")
         boss_core.player_health = boss_core.player_health - boss_core.boss_damage
-
+        print("Boss did", boss_core.boss_damage)
         
-
+    print("You have", boss_core.player_health)
+    print("The boss has", boss_core.boss_health)
 
 
 

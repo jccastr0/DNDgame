@@ -12,13 +12,13 @@ if Player_die == 20:
     print("Critical Hit!")
 
 
-boss_damage, boss_roll = Boss_Die, Boss_Die
-boss_health = 150
-player_health = 100
-player_damage = Player_die
-player_defense = Player_die // .2
-#boss_damage = die + 2
-boss_defense = Boss_Die // .2
+# boss_damage, boss_roll = Boss_Die, Boss_Die
+# boss_health = 150
+# player_health = 100
+# player_damage = Player_die
+# player_defense = Player_die // .2
+# #boss_damage = die + 2
+# boss_defense = Boss_Die // .2
 
 
 #roll_win = print("You did", die, "Damage")
@@ -44,12 +44,14 @@ def turn_logic():
         print(roll_loss[i] , end="")
     print("")
     
+
+    
     # if Player_die > Boss_Die:
-#         print("You win the turn.")
-#         boss_health = boss_health - player_damage
-#     else:
-#         print("You lost the turn.")
-#         player_health = player_health - boss_damage
+    #         print("You win the turn.")
+    #         boss_health = boss_health - player_damage
+    #     else:
+    #         print("You lost the turn.")
+    #         player_health = player_health - boss_damage
 
 
 def boss_intro():
