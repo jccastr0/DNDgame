@@ -27,6 +27,9 @@ boss_defense = Boss_Die // .2
 
 def turn_logic():
 
+    Player_die = random.randint(0,20)
+    Boss_Die = random.randint(0,20)
+
     roll_win = ["You ", "did ", "X", " Damage"]
     roll_loss = ["BOSS ", "did ", "x", " Damage "]
 
@@ -40,6 +43,7 @@ def turn_logic():
     for i in range(len(roll_loss)):
         print(roll_loss[i] , end="")
     print("")
+
 
 def boss_intro():
 
@@ -59,7 +63,7 @@ def boss_intro():
 
 
 
-boss()
+boss_intro()
 
 
 
