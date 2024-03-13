@@ -1,9 +1,5 @@
 
 
-def roll_dice():
-    pass
-
-
 
 import random
 
@@ -45,7 +41,7 @@ def turn_logic():
         print(roll_loss[i] , end="")
     print("")
 
-def boss():
+def boss_intro():
 
     print("You wandered into the boss floor in search of riches...")
     print("There it stood...")
@@ -55,7 +51,6 @@ def boss():
     # print("BOSS rolled a", boss_roll)
    
 
-turn_logic()
 
 
 

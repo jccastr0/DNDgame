@@ -1,18 +1,23 @@
 
+import boss_core
 
+run = True
+boss_core.boss_intro()
 
+while(run):
 
+    boss_core.turn_logic()
 
-
-if player_health <= 0:
-            print("Game Over.")
-            run = False
-if boss_health <= 0:
-            print("You Win.")
-            print("I'll be back.")
-        
-if player_damage == boss_damage:
-         print("Parry!")
+    if boss_core.player_health <= 0:
+        print("Game Over.")
+        run = False
+    
+    if boss_core.boss_health <= 0:
+        print("You Win.")
+        print("I'll be back.")
+            
+    if boss_core.player_damage == boss_core.boss_damage:
+        print("Parry!")
 
 
 
