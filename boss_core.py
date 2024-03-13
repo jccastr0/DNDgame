@@ -33,7 +33,7 @@ def turn_logic():
     roll_win = ["You ", "did ", "X", " Damage"]
     roll_loss = ["BOSS ", "did ", "x", " Damage "]
 
-    roll_loss[len(roll_loss)-2] = str(boss_roll)
+    roll_loss[len(roll_loss)-2] = str(Boss_Die)
     roll_win[len(roll_win)-2] = str(Player_die)
 
     for i in range(len(roll_win)):
