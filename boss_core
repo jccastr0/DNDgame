@@ -19,7 +19,7 @@ if Player_die == 20:
 boss_damage, boss_roll = Boss_Die, Boss_Die
 boss_health = 150
 player_health = 100
-player_damage = Player_die + 1
+player_damage = Player_die
 player_defense = Player_die // .2
 #boss_damage = die + 2
 boss_defense = Boss_Die // .2
@@ -55,20 +55,7 @@ def boss():
     # print("BOSS rolled a", boss_roll)
    
 
-    run = True
-   
-    if player_health <= 0:
-            print("Game Over.")
-            run = False
-
-    if boss_health <= 0:
-            print("You Win.")
-            print("I'll be back.")
-        
-    if player_damage == boss_damage:
-         print("Parry!")
-
-
+turn_logic()
 
 
 

@@ -1,0 +1,30 @@
+
+
+
+
+
+
+if player_health <= 0:
+            print("Game Over.")
+            run = False
+if boss_health <= 0:
+            print("You Win.")
+            print("I'll be back.")
+        
+if player_damage == boss_damage:
+         print("Parry!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
