@@ -3,34 +3,39 @@
 
 #import boss_core
 #ascii wizard
-with open ('artwork.txt') as file:
-    print(file.read())
+# with open ('artwork.txt') as file:
+#     print(file.read())
 
-print("\nClasses: \n")
-wizard = print("Wizard: Harnessing the power of magic allows you control over the power of vitality! On critical rolls gain back 10 health.")
-#ascii warrior
-warrior= print("\nWarrior: Channel your inner rage and conquer any foe with your mighty sword! On critical rolls get a damage boost.")
+# import asciiART
+# asciiART.GameScreen()
 
-run=True 
+def classes():
 
-while run == True:
+    print("\nClasses: \n")
+    wizard = print("Wizard: Harnessing the power of magic allows you control over the power of vitality! On critical rolls gain back 10 health.")
+    #ascii warrior
+    warrior= print("\nWarrior: Channel your inner rage and conquer any foe with your mighty sword! On critical rolls get a damage boost.")
 
-    class_selection = input("\nWhat class do you choose challenger? ")
+    run=True 
 
-    
-    if class_selection.lower() == "warrior":
-        print("\n*POOF*\n")
-        print("A warrior is born and ready for battle!")
-        player_class = "warrior"
-        run = False
+    while run == True:
+
+        class_selection = input("\nWhat class do you choose challenger? ")
+
         
+        if class_selection.lower() == "warrior":
+            print("\n*POOF*\n")
+            print("A warrior is born and ready for battle!")
+            player_class = "warrior"
+            run = False
+            
 
-    elif class_selection.lower() == "wizard":
-        print("\n*POOF*\n")
-        print("A wizard arises!")
-        player_class = "wizard"
-        run = False
-    else:
-        print("\nInteresting...however "+ class_selection +" was not a choice!")
+        elif class_selection.lower() == "wizard":
+            print("\n*POOF*\n")
+            print("A wizard arises!")
+            player_class = "wizard"
+            run = False
+        else:
+            print("\nInteresting...however "+ class_selection +" was not a choice!")
 
 
