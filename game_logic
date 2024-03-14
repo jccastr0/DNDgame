@@ -1,44 +1,44 @@
 
-import boss_core
+# import boss_core
 
-run = True
-# boss_core.boss_intro()
-# boss_core.turn_logic()
-while(run):
+# run = True
+# # boss_core.boss_intro()
+# # boss_core.turn_logic()
+# while(run):
 
     
 
-    if boss_core.player_health <= 0:
-        print("Game Over...")
-        run = False
-        exit(0)
+#     if boss_core.player_health <= 0:
+#         print("Game Over...")
+#         run = False
+#         exit(0)
     
-    if boss_core.boss_health <= 0:
-        print("You Win.")
-        print("I'll be back.")
-        exit(0)
+#     if boss_core.boss_health <= 0:
+#         print("You Win.")
+#         print("I'll be back.")
+#         exit(0)
     
     
-    print("Do you wish to continue?")
-    x = input()
-    #print(x)
+#     print("Do you wish to continue?")
+#     x = input()
+#     #print(x)
 
-    boss_core.turn_logic()
+#     boss_core.turn_logic()
 
-    if boss_core.player_damage > boss_core.boss_damage:
-        print("You win the turn.")
-        boss_core.boss_health = boss_core.boss_health - boss_core.player_damage
-        print("You did", boss_core.player_damage,"damage")
-    elif boss_core.player_damage == boss_core.boss_damage:
-        print("Parry!")
-    elif boss_core.player_damage < boss_core.boss_damage:
-        print("You lost the turn.")
-        boss_core.player_health = boss_core.player_health - boss_core.boss_damage
-        print("Boss did", boss_core.boss_damage, "damge.")
+#     if boss_core.player_damage > boss_core.boss_damage:
+#         print("You win the turn.")
+#         boss_core.boss_health = boss_core.boss_health - boss_core.player_damage
+#         print("You did", boss_core.player_damage,"damage")
+#     elif boss_core.player_damage == boss_core.boss_damage:
+#         print("Parry!")
+#     elif boss_core.player_damage < boss_core.boss_damage:
+#         print("You lost the turn.")
+#         boss_core.player_health = boss_core.player_health - boss_core.boss_damage
+#         print("Boss did", boss_core.boss_damage, "damge.")
         
-    if( boss_core.player_health > 0 & boss_core.boss_health > 0):
-        print("You have", boss_core.player_health)
-        print("The boss has", boss_core.boss_health)
+#     if( boss_core.player_health > 0 & boss_core.boss_health > 0):
+#         print("You have", boss_core.player_health)
+#         print("The boss has", boss_core.boss_health)
 
 
 
