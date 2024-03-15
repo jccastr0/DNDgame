@@ -6,7 +6,7 @@
 # with open ('artwork.txt') as file:
 #     print(file.read())
 
-# import asciiART
+import asciiART
 # asciiART.GameScreen()
 
 def classes():
@@ -27,14 +27,16 @@ def classes():
         
         if class_selection.lower() == "warrior":
             print("\n*POOF*\n")
-            print("A warrior is born and ready for battle!")
+            print("A warrior is born and ready for battle!\n")
+            asciiART.warrior()
             player_class = "warrior"
             run = False
             
 
         elif class_selection.lower() == "wizard":
             print("\n*POOF*\n")
-            print("A wizard arises!")
+            print("A wizard arises!\n")
+            asciiART.druid()
             player_class = "wizard"
             run = False
         else:
