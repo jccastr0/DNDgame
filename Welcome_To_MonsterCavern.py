@@ -14,13 +14,13 @@ def begin():
 
     while run == True:
         
-        intro_cutscene = input("\nDo you dare challenge the Monster Cavern?\n")
+        intro_cutscene = input("\nDo you dare challenge the Monster Cavern...? ")
 
         if intro_cutscene.lower() == "yes":
             print("\nYou will now stare at the darkness of the abyss, but forwarned the abyss stares back...")
             run = False
         else:
-            print("\nBegone, you're not worthy anyways. The world was overrun with monsters...\n")
+            print("\n" * 100 + "Begone, you're not worthy anyways. The world was overrun with monsters...darkness has won the battle.\n")
             run = False
 
         if intro_cutscene.lower() == "yes":
