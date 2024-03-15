@@ -7,6 +7,7 @@ def begin():
     import asciiART
     import player_core
     import game_logic2
+    import time
 
     run = True
 
@@ -15,9 +16,11 @@ def begin():
     while run == True:
         
         intro_cutscene = input("\nDo you dare challenge the Monster Cavern...? ")
+        # time.sleep(3)
 
         if intro_cutscene.lower() == "yes":
             print("\nYou will now stare at the darkness of the abyss, but forwarned the abyss stares back...")
+            time.sleep(3)
             run = False
         else:
             print("\n" * 100 + "Begone, you're not worthy anyways. The world was overrun with monsters...darkness has won the battle.\n")

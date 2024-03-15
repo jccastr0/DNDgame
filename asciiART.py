@@ -13,7 +13,7 @@ def druid():
     print("                  ' :.")
     print("            __      `;.")
     print("          /' /\   ,   \  ")
-    print("        /   |ee|      `;")
+    print("        /   |  |      `;")
     print("       (    |_,| ,     `,")
     print("        )  , \ '       `:")
     print("       ;      _     |--,_;    '")
@@ -23,7 +23,7 @@ def druid():
     print("     ,         |  , :'")
     print("     |         `   ,'")
     print("    ,'          `  ;")
-    print("__==' ___, pb __/_")
+    print("__==' ___,    __/_")
 
 
 def warrior():
