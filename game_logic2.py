@@ -1,49 +1,57 @@
-import random
-import player_core
+def boss():
 
-player_core.classes()
+    import random
+    import player_core
 
-player_health = 100
+    player_core.classes()
 
-boss_health = 150
+    player_health = 100
 
-while player_health > 0 and boss_health > 0:
+    boss_health = 150
 
-    boss_roll = random.randint(1,12)
+    while player_health > 0 and boss_health > 0:
 
-    player_roll = random.randint(1,20)
+        boss_roll = random.randint(1,20)
 
-    print(player_roll)
-    print(str(boss_roll))
+        player_roll = random.randint(1,20)
 
-    if player_roll == 20:
-        if player_class.lower() == "wizard":
-            player_health = player_health + 10
+        crit_roll = random.randint (1,5)
+
+        print(player_roll)
+        print(str(boss_roll))
+
+        if player_roll == 20:
             crit = True
+            if player_core.player_class == "wizard":
+                
+                player_health = player_health + 10
+                
 
-        elif player_class.lower() == 'warrior':
-            player_roll=player_roll + 5
-            crit = True
+            elif player_core.player_class == 'warrior':
+                
+                player_roll = player_roll + crit_roll
+                
 
+        else:
+            crit = False
+        if player_roll < boss_roll:
+            player_health = player_health - boss_roll
+            print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!\n")
+
+        elif player_roll == boss_roll:
+            print("The enemy is strong...your attack is parried!\n")
+
+        elif player_roll > boss_roll:
+            boss_health = boss_health - player_roll
+            if crit == True:
+                print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
+            print("You did "+ str(player_roll) +" damage!")
+            print("Boss Health: " + str(boss_health)+"\n")
+            print("Your Health: "+str(player_health))
+            
+
+    if player_health > boss_health:
+        print("You have slain the evil that creeps!")
     else:
-        crit = False
-    if player_roll < boss_roll:
-        player_health = player_health - boss_roll
-        print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!\n")
-
-    elif player_roll == boss_roll:
-        print("The enemy is strong...your attack is parried!\n")
-
-    elif player_roll > boss_roll:
-        boss_health = boss_health - player_roll
-        if crit == True:
-            print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
-        print("You did "+ str(player_roll) +" damage!")
-        print("Boss Health: " + str(boss_health)+"\n")
-        
-
-if player_health > boss_health:
-    print("You have slain the evil that creeps!")
-else:
-    print('Foolish mortal...your soul is mine.')
-    print("Game Over!")
+        print('Foolish mortal...your soul is mine.')
+        print("Game Over!")

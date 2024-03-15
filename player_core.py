@@ -11,6 +11,8 @@
 
 def classes():
 
+    global player_class
+
     print("\nClasses: \n")
     wizard = print("Wizard: Harnessing the power of magic allows you control over the power of vitality! On critical rolls gain back 10 health.")
     #ascii warrior
@@ -40,8 +42,10 @@ def classes():
     
     if player_class.lower() == "wizard":
         username =  input('\nWhat is your name traveler? ')
-        print("\n"+username.title()+ " the wizard...hmm...may your magic guide the way.")
+        print("\n"+username.title()+ " the wizard...hmm...may your magic guide the way.\n")
     
     elif player_class.lower() == "warrior":
         username =  input('\nWhat is your name traveler? ')
-        print("\n"+username.title()+' the warrior! May your sword never become dull or your bravery waiver.')
+        print("\n"+username.title()+' the warrior! May your sword never become dull or your bravery waiver.\n')
+
+    
