@@ -11,7 +11,7 @@ def boss():
 
     while player_health > 0 and boss_health > 0:
 
-        boss_roll = random.randint(1,20)
+        boss_roll = random.randint(1,15)
 
         player_roll = random.randint(1,20)
 
@@ -55,3 +55,4 @@ def boss():
     else:
         print('Foolish mortal...your soul is mine.')
         print("Game Over!")
+
