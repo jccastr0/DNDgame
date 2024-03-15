@@ -7,9 +7,7 @@ def GameScreen():
     print("     \/  \/ \___|_|\___\___/|_| |_| |_|\___|    \__\___/    |_|  |_|\___/|_| |_|___/\__\___|_|     \_____\__,_| \_/ \___|_|  |_| |_|")
 
 
-
 def druid():
-
     print("                   ;")
     print("                   `,")
     print("                  ' :.")
@@ -26,7 +24,6 @@ def druid():
     print("     |         `   ,'")
     print("    ,'          `  ;")
     print("__==' ___, pb __/_")
-
 
 
 def warrior():
@@ -52,55 +49,94 @@ def warrior():
 
 
 
+def GameOver():
+    print(" _____                        _____                ")
+    print("|  __ \                      |  _  |               ")
+    print("| |  \/ __ _ _ __ ___   ___  | | | |_   _____ _ __ ")
+    print("| | __ / _` | '_ ` _ \ / _ \ | | | \ \ / / _ \ '__|")
+    print("| |_\ \ (_| | | | | | |  __/ \ \_/ /\ V /  __/ |   ")
+    print(" \____/\__,_|_| |_| |_|\___|  \___/  \_/ \___|_|   \n")
+   
 
+def GameWin():
+    print("__   __             _    _ _         _ ")
+    print("\ \ / /            | |  | (_)       | |")
+    print(" \ V /___  _   _   | |  | |_ _ __   | |")
+    print("  \ // _ \| | | |  | |/\| | | '_ \  | |")
+    print("  | | (_) | |_| |  \  /\  / | | | | |_|")
+    print("  \_/\___/ \__,_|   \/  \/|_|_| |_| (_)\n")
 
+# Joker the Reaper (Once taken down early on in the game, he will come back as the final boss.)
+def FirstBoss():
+    print("             ___          ")
+    print("            /   \\        ")
+    print("       /\\ | . . \\       ")
+    print("     ////\\|     ||       ")
+    print("   ////   \\ ___//\       ")
+    print("  ///      \\      \      ")
+    print(" ///       |\\      |     ")
+    print("//         | \\  \   \    ")
+    print("/          |  \\  \   \   ")
+    print("           |   \\ /   /   ")
+    print("           |    \/   /    ")
+    print("           |      \\|     ")
+    print("           |      \\|     ")
+    print("           |       \\     ")
+    print("           |        |     ")
+    print("           |_________\    \n")
 
-# warrior2 = r'''\
+# Maka the Gryphon (Seems harmless at first, but once its health reaches a certain point itll go down with a fight.
+def SecondBoss():
+    print("   ____       ____")
+    print("  /    )     (    \ ")
+    print(" /    (  ^_^  )    \ ")
+    print("|  {   \('v')/   }  |")
+    print("|   {   /   \   }   |")
+    print("|_)(   /\   /\   )(_|")
+    print("|)  (_ | \|/  |_)  (|")
+    print("'     ""     ""         '\n")
+# 2nd phase to Maka
+def SecondBossPhaseTwo():
+    print("                        ______")
+    print("             ______,---'__,---'")
+    print("         _,-'---_---__,---'")
+    print("  /_    (,  ---____',")
+    print(" /  ',,   `, ,-'")
+    print(";/)   ,',,_/,'")
+    print("| /\   ,.'//\ ") 
+    print("`-` \ ,,'    `.")
+    print("     `',   ,-- `.")
+    print("     '/ / |      `,         _")
+    print("     //'',.\_    .\\      ,{==>-")
+    print("  __//   __;_`-  \ `;.__,;'")
+    print("((,--,) (((,------;  `--' ")
+    print("```  '   ```\n")
 
-#   / \
-#   | |
-#   |.|
-#   |.|
-#   |:|      __
-# ,_|:|_,   /  )
-#   (Oo    / _I_
-#    +\ \  || __|
-#       \ \||___|
-#         \ /.:.\-\
-#          |.:. /-----\
-#          |___|::oOo::|
-#          /   |:<_T_>:|
-#         |_____\ ::: /
-#          | |  \ \:/
-#          | |   | |
-#          \ /   | \___
-#          / |   \_____\
-#          `-'                                                                                                                                   
-# '''
-# druid2 = r'''\
-#                        ;
-#                        `,
-#                       ' :.
-#                 __      `;.
-#               /' /\   ,   \  
-#             /   |ee|      `;
-#            (    |_,| ,     `,
-#             )  , \ '       `:
-#            ;      _     |--,_;    '
-#           |    ,  : /,     ,'
-#           |   '   :|  ,   /'
-#           ,        |    ,;
-#          ,         |  , :'
-#          |         `   ,'
-#         ,'          `  ;
-#     __==' ___, pb __/_
-# r'''
-
-# spacing = ' ' * 5
-# classes = warrior2, druid2
-
-# for pieces in zip(*(card.splitlines() for card in classes)):
-#     print(spacing.join(pieces))
+# Joker the Reaper's Final form.
+def LastBoss():
+    print("                                         .""--..__")
+    print("                     _                     []       ``-.._")
+    print("                  .'` `'.                  ||__           `-._")
+    print("                 /    ,-.\                 ||_ ```---..__     `-.")
+    print("                /    /:::\\               /|//}          ``--._  `.")
+    print("                |    |:::||              |////}                `-. \ ")
+    print("                |    |:::||             //'///                    `.\ ")
+    print("                |    |:::||            //  ||'                      `|")
+    print("                /    |:::|/        _,-//\  ||")
+    print("               /`    |:::|`-,__,-'`  |/  \ ||")
+    print("             /`  |   |'' ||           \   |||")
+    print("           /`    \   |   ||            |  /||")
+    print("         |`       |  |   |)            \ | ||")
+    print("        |          \ |   /      ,.__    \| ||")
+    print("        /           `         /`    `\   | ||")
+    print("   |\            /          |              ||")
+    print("   \/`-._       |           /              ||")
+    print("    //   `.    /`           |              ||")
+    print("   //`.    `. |             \              ||")
+    print("  ///\ `-._  )/             |              ||")
+    print(" //// )   .(/               |              ||")
+    print(" ||||   ,'` )               /              //")
+    print(" `\\` /`                    |             // \n")
 
 
 
