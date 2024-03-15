@@ -13,7 +13,7 @@ def boss():
 
         boss_roll = random.randint(1,15)
 
-        player_roll = random.randint(1,20)
+        player_roll = random.randint(19,20)
 
         crit_roll = random.randint (1,5)
 
