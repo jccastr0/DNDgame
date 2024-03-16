@@ -20,15 +20,17 @@ def begin():
 
         if intro_cutscene.lower() == "yes":
             print("\nYou will now stare at the darkness of the abyss, but forwarned the abyss stares back...")
-            time.sleep(3)
+            time.sleep(1)
             run = False
         else:
             
             print("Begone, you're not worthy anyways. The world was overrun with monsters...darkness has won the battle.\n")
             run = False
 
-        if intro_cutscene.lower() == "yes":
-            game_logic2.boss()
+        if intro_cutscene.lower() == 'yes':
+            player_core.classes()
+        else:
+            None
 
 
 

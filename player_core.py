@@ -11,7 +11,7 @@ import time
 # asciiART.GameScreen()
 
 def classes():
-
+    import game_logic2
     global player_class
 
     print("\nClasses: \n")
@@ -20,12 +20,12 @@ def classes():
     wizard = print("Wizard: Harnessing the power of magic allows you control over the power of vitality! On critical rolls gain back 10 health.")
     # time.sleep(3)
     # asciiART.druid()
-    time.sleep(5)
+    time.sleep(2)
     #ascii warrior
     warrior= print("\nWarrior: Channel your inner rage and conquer any foe with your mighty sword! On critical rolls get a damage boost.")
     # time.sleep(3)
     # asciiART.warrior()
-    time.sleep(5)
+    time.sleep(2)
     run=True 
 
     while run == True:
@@ -57,5 +57,5 @@ def classes():
     elif player_class.lower() == "warrior":
         username =  input('\nWhat is your name traveler? ')
         print("\n"+username.title()+' the warrior! May your sword never become dull or your bravery waiver.\n')
-
     
+    game_logic2.boss_2()
