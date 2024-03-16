@@ -20,7 +20,8 @@ def begin():
             print("\nYou will now stare at the darkness of the abyss, but forwarned the abyss stares back...")
             run = False
         else:
-            print("\n" * 100 + "Begone, you're not worthy anyways. The world was overrun with monsters...darkness has won the battle.\n")
+            
+            print("Begone, you're not worthy anyways. The world was overrun with monsters...darkness has won the battle.\n")
             run = False
 
         if intro_cutscene.lower() == "yes":

@@ -1,4 +1,4 @@
-#import game_logic2
+#nimport game_logic2
 
 #import player_core
 
