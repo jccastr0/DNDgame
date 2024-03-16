@@ -2,6 +2,8 @@ def boss():
 
     import random
     import player_core
+    import asciiART
+    import time
 
     player_core.classes()
 
