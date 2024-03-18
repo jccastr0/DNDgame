@@ -49,13 +49,13 @@ def boss_run():
             if player_roll < boss_roll:
                 player_health = player_health - boss_roll
                 print("Boss attacks and deals "+ str(boss_roll)+" damage.")
-                print("Boss Health: " + str(boss_health)+"\n")
-                print("Your Health: "+str(player_health))
-                input('Press enter to continue...')
+                print("Boss Health: " + str(boss_health))
+                print("Your Health: "+str(player_health)+"\n")
+                input('Press enter to continue...\n')
 
             elif player_roll == boss_roll:
                 print("The enemy is strong...your attack is parried!\n")
-                input("Press enter to continue...")
+                input("Press enter to continue...\n")
 
             elif player_roll > boss_roll:
                 boss_health = boss_health - player_roll
@@ -66,8 +66,8 @@ def boss_run():
                         print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
                 print("You did "+ str(player_roll) +" damage!")
                 print("Boss Health: " + str(boss_health))
-                print("Your Health: "+str(player_health))
-                input("Press enter to continue...")
+                print("Your Health: "+str(player_health)+'\n')
+                input("Press enter to continue...\n")
                 
 
         if player_health > boss_health:
@@ -138,14 +138,14 @@ def boss_run():
                                 print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!")
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
-                                input("Press enter to continue...")
+                                input("Press enter to continue...\n")
 
                             elif player_roll == boss_roll:
                                 boss_health = boss_health + 10
                                 print("The enemy is strong...your attack is parried and the enemy takes his chance to cast a spell and gain health!")
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
-                                input("Press enter to continue...")
+                                input("Press enter to continue...\n")
 
                             elif player_roll > boss_roll:
                                 boss_health = boss_health - player_roll
@@ -159,7 +159,7 @@ def boss_run():
                                 print("You did "+ str(player_roll) +" damage!")
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
-                                input("Press enter to continue...")
+                                input("Press enter to continue...\n")
 
                         if player_health > boss_health:
                             next = True
@@ -223,12 +223,12 @@ def boss_run():
                                             player_health = player_health - boss_roll
                                             print("Boss attacks and deals "+ str(boss_roll)+" damage.")
                                             print("Boss Health: " + str(boss_health)+"\n")
-                                            print("Your Health: "+str(player_health))
-                                            input("Press enter to continue...")
+                                            print("Your Health: "+str(player_health)+'\n')
+                                            input("Press enter to continue...\n")
 
                                         elif player_roll == boss_roll:
                                             print("I applaud you, to be able to cancel out an attack like that requires an unnerving will.\n")
-                                            input("Press enter to continue...")
+                                            input("Press enter to continue...\n")
 
                                         elif player_roll > boss_roll:
                                             boss_health = boss_health - player_roll
@@ -239,8 +239,8 @@ def boss_run():
                                                     print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
                                             print("You did "+ str(player_roll) +" damage!")
                                             print("Boss Health: " + str(boss_health)+"\n")
-                                            print("Your Health: "+str(player_health))
-                                            input("Press enter to continue...")
+                                            print("Your Health: "+str(player_health)+'\n')
+                                            input("Press enter to continue...\n")
                                             
 
                                     if player_health > boss_health:
