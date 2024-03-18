@@ -42,6 +42,9 @@ def boss_run():
 
         asciiART.SecondBossPhaseTwo()
         print("GRAAAAAAHHHH\n")
+        input("Press enter to begin...")
+        os.system('cls')
+        asciiART.SecondBossPhaseTwo()
 
         while player_health > 0 and boss_health > 0:
 
@@ -78,10 +81,12 @@ def boss_run():
                 print("Your Health: "+str(player_health)+"\n")
                 input('Press enter to continue...\n')
                 os.system('cls')
+                asciiART.SecondBossPhaseTwo()
             elif player_roll == boss_roll:
                 print("Swiftly gaining altitude, it streamlines towards you. You parry Maka's attack.\n")
                 input("Press enter to continue...\n")
                 os.system('cls')
+                asciiART.SecondBossPhaseTwo()
             elif player_roll > boss_roll:
                 boss_health = boss_health - player_roll
                 if crit == True:
@@ -94,6 +99,7 @@ def boss_run():
                 print("Your Health: "+str(player_health)+'\n')
                 input("Press enter to continue...\n")
                 os.system('cls')
+                asciiART.SecondBossPhaseTwo()
 
         if player_health > boss_health:
             next = True
@@ -294,13 +300,13 @@ def boss_run():
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
-                                                asciiART.LastBoss()
+                                                asciiART.FirstBoss()
 
                                             elif player_roll == boss_roll:
                                                 print("I applaud you, to be able to cancel out an attack like that, requires an unnerving will.\n")
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
-                                                asciiART.LastBoss()
+                                                asciiART.FirstBoss()
 
                                             elif player_roll > boss_roll:
                                                 boss_health = boss_health - player_roll
@@ -314,7 +320,7 @@ def boss_run():
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
-                                                asciiART.LastBoss()
+                                                asciiART.FirstBoss()
                                                 
                                     print('Second phase...')
                                     time.sleep(2)
@@ -322,6 +328,8 @@ def boss_run():
                                     time.sleep(3)
                                     print("I'll unleash my secret ability from the hein era.")
                                     time.sleep(3)
+                                    os.system('cls')
+                                    asciiART.cloud()
 
 
                                     while player_health > 0 and boss_health > 0:
