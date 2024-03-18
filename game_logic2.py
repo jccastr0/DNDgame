@@ -292,17 +292,24 @@ def boss_run():
                                                 warrior_status = False
                                             if player_roll < boss_roll:
                                                 player_health = player_health - boss_roll
+                                                print(player_health)
+                                                player_health = player_health - 2
                                                 print("Boss attacks and deals "+ str(boss_roll)+" damage.")
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
+                                                os.system('cls')
 
                                             elif player_roll == boss_roll:
                                                 print("I applaud you, to be able to cancel out an attack like that requires an unnerving will.\n")
+                                                player_health = player_health - 2 
+                                                print(player_health)
                                                 input("Press enter to continue...\n")
-
+                                                os.system('cls')
                                             elif player_roll > boss_roll:
                                                 boss_health = boss_health - player_roll
+                                                print(player_health)
+                                                player_health = player_health - 2 
                                                 if crit == True:
                                                     if warrior_status == True:
                                                         print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
@@ -312,6 +319,7 @@ def boss_run():
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
+                                                os.system('cls')
                                                 
 
 
