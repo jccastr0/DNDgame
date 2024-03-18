@@ -167,18 +167,7 @@ def squidward():
         print("       .`/  |     | |/`.")
         print("       |    |     |    |")
         print("       '._.'| .-. |'._.'")
-        print("             \ | /")
-        print("             | | |")
-        print("             | | |")
-        print("             | | |")
-        print("            /| | |\ ")
-        print("          .'_| | |_`.")
-        print("          `. | | | .'")
-        print("       .    /  |  \    .")
-        print("      /o`.-'  / \  `-.`o\ ")
-        print("     /o  o\ .'   `. /o  o\ ")
-        print("     `.___.'       `.___.'")
-
+      
 
 
 

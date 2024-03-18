@@ -140,7 +140,7 @@ def boss_run():
                         print("You shall perish like the rest of them.\n")
                         time.sleep(2)
 
-                        print("*Due to copyright laws, this is not squidward.*\n")
+                        print("*Due to copyright laws, this is not squidward but his cousin OCTOWARD!.*\n")
                         time.sleep(2)
 
                         while player_health > 0 and boss_health > 0:
@@ -188,6 +188,7 @@ def boss_run():
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
                                 os.system('cls')
+                                asciiART.squidward()
 
                             elif player_roll == boss_roll:
                                 boss_health = boss_health + 10
@@ -196,6 +197,7 @@ def boss_run():
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
                                 os.system('cls')
+                                asciiART.squidward()
 
                             elif player_roll > boss_roll:
                                 boss_health = boss_health - player_roll
@@ -211,6 +213,7 @@ def boss_run():
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
                                 os.system('cls')
+                                asciiART.squidward()
 
                         if player_health > boss_health:
                             next = True
