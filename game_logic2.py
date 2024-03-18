@@ -400,7 +400,7 @@ def boss_run():
                                     time.sleep(3)
                                     os.system('cls')
                                     asciiART.cloud()
-                                    time.sleep(2)
+                                    time.sleep(3)
                                     os.system('cls')
                                     asciiART.HellMaskTitle()
                                     asciiART.LastBoss()
