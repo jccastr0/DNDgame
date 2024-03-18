@@ -43,6 +43,8 @@ def boss_3():
 
             else:
                 crit = False
+                wizard_status = False
+                warrior_status = False
             if player_roll < boss_roll:
                 player_health = player_health - boss_roll
                 print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!\n")
@@ -70,4 +72,3 @@ def boss_3():
             # print("Game Over!")
             asciiART.GameOver()
 
-boss_3()

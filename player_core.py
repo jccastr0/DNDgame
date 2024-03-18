@@ -58,4 +58,3 @@ def classes():
         username =  input('\nWhat is your name traveler? ')
         print("\n"+username.title()+' the warrior! May your sword never become dull or your bravery waiver.\n')
     
-    game_logic2.boss_2()
