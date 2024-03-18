@@ -34,6 +34,7 @@ def classes():
         import os
         import time
         class_selection = input("\nWhat class do you choose challenger? ")
+        os.system('cls')
 
         
         if class_selection.lower() == "warrior":

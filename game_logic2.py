@@ -31,13 +31,13 @@ def boss_run():
         print("There it was, proudly standing upright.")
         time.sleep(3)
 
-        print("Your first enemy: Maka the Gryphon.\n")
-        time.sleep(3)
-
         print("Said to be a legendary beast from the days of old")
         time.sleep(3)
 
         print("It takes notice of you. Prepare yourself.")
+        time.sleep(3)
+
+        print("Your first enemy:\n")
         time.sleep(3)
 
         asciiART.SecondBossPhaseTwo()
@@ -54,8 +54,8 @@ def boss_run():
 
             crit_roll = random.randint (1,5)
 
-            print("Your roll..."+player_roll)
-            print("Maka the Gryffin rolls a..."+boss_roll)
+            print("You roll a: "+ str(player_roll))
+            print("Maka the Gryffin rolls a: "+str(boss_roll)+'\n')
 
             if player_roll == 20:
                 crit = True
@@ -129,6 +129,7 @@ def boss_run():
 
                         print("You march onwards.\n")
                         time.sleep(3)
+                        os.system('cls')
                         
                         wizard_status = True
                         warrior_status = True
@@ -148,7 +149,9 @@ def boss_run():
                         time.sleep(2)
 
                         print("*Due to copyright laws, this is not squidward but his cousin OCTOWARD!.*\n")
-                        time.sleep(2)
+                        input('Press enter to continue...')
+                        os.system('cls')
+                        asciiART.squidward()
 
                         while player_health > 0 and boss_health > 0:
 
@@ -158,8 +161,8 @@ def boss_run():
 
                             crit_roll = random.randint (1,5)
 
-                            print("Your roll..."+player_roll)
-                            print('Octoward the Kraken rolls a...'+boss_roll)
+                            print("You roll a: "+str(player_roll))
+                            print('\nOctoward the Kraken rolls a: '+str(boss_roll)+'\n')
 
                             if player_roll == 20:
                                 crit = True
@@ -273,8 +276,8 @@ def boss_run():
 
                                             crit_roll = random.randint (1,5)
 
-                                            print(player_roll)
-                                            print(str(boss_roll))
+                                            print('You roll a: '+str(player_roll))
+                                            print('Hellmask the slayer rolls a: '+str(boss_roll)+'\n')
 
                                             if player_roll == 20:
                                                 crit = True
@@ -340,8 +343,8 @@ def boss_run():
 
                                             crit_roll = random.randint (1,5)
 
-                                            print(player_roll)
-                                            print(str(boss_roll))
+                                            print('You roll a: '+ str(player_roll))
+                                            print('Hellmask rolls a: '+str(boss_roll))
 
                                             if player_roll == 20:
                                                 crit = True
