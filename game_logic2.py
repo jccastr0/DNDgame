@@ -178,7 +178,7 @@ def boss_run():
 
                             boss_roll = random.randint(1,20)
 
-                            player_roll = random.randint(1,20)
+                            player_roll = random.randint(15,20)
 
                             crit_roll = random.randint (1,5)
 
