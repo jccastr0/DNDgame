@@ -38,6 +38,7 @@ def boss_run():
         time.sleep(3)
 
         print("It takes notice of you. Prepare yourself.")
+        time.sleep(3)
 
         asciiART.SecondBossPhaseTwo()
         print("GRAAAAAAHHHH\n")
