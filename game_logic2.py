@@ -22,7 +22,7 @@ def boss_run():
 
             boss_roll = random.randint(1,15)
 
-            player_roll = random.randint(1,20)
+            player_roll = random.randint(19,20)
 
             crit_roll = random.randint (1,5)
 
@@ -99,7 +99,7 @@ def boss_run():
 
                             boss_roll = random.randint(1,20)
 
-                            player_roll = random.randint(1,20)
+                            player_roll = random.randint(19,20)
 
                             crit_roll = random.randint (1,5)
 
@@ -222,7 +222,7 @@ def boss_run():
                                         if player_roll < boss_roll:
                                             player_health = player_health - boss_roll
                                             print("Boss attacks and deals "+ str(boss_roll)+" damage.")
-                                            print("Boss Health: " + str(boss_health)+"\n")
+                                            print("Boss Health: " + str(boss_health))
                                             print("Your Health: "+str(player_health)+'\n')
                                             input("Press enter to continue...\n")
 
@@ -238,7 +238,7 @@ def boss_run():
                                                 if wizard_status == True:
                                                     print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
                                             print("You did "+ str(player_roll) +" damage!")
-                                            print("Boss Health: " + str(boss_health)+"\n")
+                                            print("Boss Health: " + str(boss_health))
                                             print("Your Health: "+str(player_health)+'\n')
                                             input("Press enter to continue...\n")
                                             
@@ -246,7 +246,9 @@ def boss_run():
                                     if player_health > boss_health:
                                         print("\nYou alone have achieved Enlightenment. You alone stand at the top.\n                         You have conquered the dungeon.")
                                         asciiART.GameWin()
+                                        next = False
                                     else:
                                         print('You are the fallen, the one who stood no chance.')
                                         # print("Game Over!")
                                         asciiART.GameOver()
+                                        next = False
