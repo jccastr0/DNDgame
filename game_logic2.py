@@ -110,6 +110,9 @@ def boss_run():
         if player_health > boss_health:
             next = True
             print("\nYou have slain the evil that creeps!\n")
+            time.sleep(2)
+            asciiART.victory()
+            time.sleep(2)
             input('Press Enter to Continue!')
             os.system('cls')
         else:
@@ -247,6 +250,9 @@ def boss_run():
                         if player_health > boss_health:
                             next = True
                             print("\nThe enemy's shriek pierces the air making the cave tremble...another enemy falls to your hand!\n")
+                            time.sleep(2)
+                            asciiART.victory()
+                            time.sleep(3)
                             input('Press enter to continue!')
                             os.system('cls')
                         else:
@@ -279,6 +285,8 @@ def boss_run():
                                     time.sleep(3)
                                     asciiART.HellMaskTitle()
                                     asciiART.FirstBoss()
+                                    print("I will defeat you.")
+                                    time.sleep(3)
                                     os.system("cls")
                                     asciiART.HellMaskTitle()
                                     asciiART.FirstBoss()
