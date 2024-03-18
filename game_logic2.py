@@ -146,7 +146,7 @@ def boss_run():
                         print("It pulls out his weapon...")
                         time.sleep(2)
                         print("THE CLARINET OF DEATH.")
-                        time.sleep(1)
+                        time.sleep(2)
                         os.system("cls")
                         
                         wizard_status = True
