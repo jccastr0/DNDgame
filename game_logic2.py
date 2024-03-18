@@ -40,10 +40,13 @@ def boss_run():
         print("Your first enemy:\n")
         time.sleep(3)
 
+        asciiART.MakaTitle()
+        time.sleep(3)
         asciiART.SecondBossPhaseTwo()
         print("GRAAAAAAHHHH\n")
         input("Press enter to begin...")
         os.system('cls')
+        asciiART.MakaTitle()
         asciiART.SecondBossPhaseTwo()
 
         while player_health > 0 and boss_health > 0:
@@ -81,24 +84,27 @@ def boss_run():
                 print("Your Health: "+str(player_health)+"\n")
                 input('Press enter to continue...\n')
                 os.system('cls')
+                asciiART.MakaTitle()
                 asciiART.SecondBossPhaseTwo()
             elif player_roll == boss_roll:
                 print("Swiftly gaining altitude, it streamlines towards you. You parry Maka's attack.\n")
                 input("Press enter to continue...\n")
                 os.system('cls')
+                asciiART.MakaTitle()
                 asciiART.SecondBossPhaseTwo()
             elif player_roll > boss_roll:
                 boss_health = boss_health - player_roll
                 if crit == True:
                     if warrior_status == True:
                         print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
-                    if wizard_status == True:
+                    elif wizard_status == True:
                         print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
                 print("You did "+ str(player_roll) +" damage!")
                 print("Boss Health: " + str(boss_health))
                 print("Your Health: "+str(player_health)+'\n')
                 input("Press enter to continue...\n")
                 os.system('cls')
+                asciiART.MakaTitle()
                 asciiART.SecondBossPhaseTwo()
 
         if player_health > boss_health:
@@ -130,6 +136,14 @@ def boss_run():
                         print("You march onwards.\n")
                         time.sleep(3)
                         os.system('cls')
+
+                        print("From the depths of the sea, the ancient one rises.")
+                        time.sleep(2)
+                        print("It pulls out his weapon...")
+                        time.sleep(2)
+                        print("THE CLARINET OF DEATH.")
+                        time.sleep(1)
+                        os.system("cls")
                         
                         wizard_status = True
                         warrior_status = True
@@ -137,6 +151,7 @@ def boss_run():
                         player_health = 100
 
                         boss_health = 150
+                        asciiART.OctowardTitle()
 
                         asciiART.squidward()
                         print("...")
@@ -151,6 +166,7 @@ def boss_run():
                         print("*Due to copyright laws, this is not squidward but his cousin OCTOWARD!.*\n")
                         input('Press enter to continue...')
                         os.system('cls')
+                        asciiART.OctowardTitle()
                         asciiART.squidward()
 
                         while player_health > 0 and boss_health > 0:
@@ -161,8 +177,8 @@ def boss_run():
 
                             crit_roll = random.randint (1,5)
 
-                            print("You roll a: "+str(player_roll))
-                            print('\nOctoward the Kraken rolls a: '+str(boss_roll)+'\n')
+                            print("\nYou roll a: "+str(player_roll))
+                            print('Octoward the Kraken rolls a: '+str(boss_roll)+'\n')
 
                             if player_roll == 20:
                                 crit = True
@@ -198,6 +214,7 @@ def boss_run():
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
                                 os.system('cls')
+                                asciiART.OctowardTitle()
                                 asciiART.squidward()
 
                             elif player_roll == boss_roll:
@@ -207,6 +224,7 @@ def boss_run():
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
                                 os.system('cls')
+                                asciiART.OctowardTitle()
                                 asciiART.squidward()
 
                             elif player_roll > boss_roll:
@@ -215,7 +233,7 @@ def boss_run():
                                 if crit == True:
                                     if wizard_status == True:
                                         print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
-                                    if warrior_status == True:    
+                                    elif warrior_status == True:    
                                         print("You channel your warrior spirit and swing your mighty sword...your attack is deadly and severely wounds the enemy!")
 
                                 print("You did "+ str(player_roll) +" damage!")
@@ -223,6 +241,7 @@ def boss_run():
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
                                 os.system('cls')
+                                asciiART.OctowardTitle()
                                 asciiART.squidward()
 
                         if player_health > boss_health:
@@ -249,11 +268,20 @@ def boss_run():
                                     wizard_status = True
                                     warrior_status = True
 
-                                    asciiART.FirstBoss()
-                                    print("At last, the final champion approaches. \nThose in the past who approached have fallen.\nConfidence alone won't prevail.")
+                                
+                                    print("At last, the final champion approaches.")
                                     time.sleep(3)
-                                    print("'Joker the Slayer' approaches quickly!\n")
-                                    time.sleep(1)
+                                    print("\nThose in the past who approached have fallen.")
+                                    time.sleep(3)
+                                    print("\nConfidence alone won't prevail.")
+                                    time.sleep(3)
+                                    print("'HellMask the Slayer' approaches quickly!\n")
+                                    time.sleep(3)
+                                    asciiART.HellMaskTitle()
+                                    asciiART.FirstBoss()
+                                    os.system("cls")
+                                    asciiART.HellMaskTitle()
+                                    asciiART.FirstBoss()
 
                                     # player_core.classes()
 
@@ -303,12 +331,14 @@ def boss_run():
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
+                                                asciiART.HellMaskTitle()
                                                 asciiART.FirstBoss()
 
                                             elif player_roll == boss_roll:
                                                 print("I applaud you, to be able to cancel out an attack like that, requires an unnerving will.\n")
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
+                                                asciiART.HellMaskTitle()
                                                 asciiART.FirstBoss()
 
                                             elif player_roll > boss_roll:
@@ -323,6 +353,7 @@ def boss_run():
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
+                                                asciiART.HellMaskTitle()
                                                 asciiART.FirstBoss()
                                                 
                                     print('Second phase...')
@@ -333,6 +364,12 @@ def boss_run():
                                     time.sleep(3)
                                     os.system('cls')
                                     asciiART.cloud()
+                                    time.sleep(2)
+                                    os.system('cls')
+                                    asciiART.HellMaskTitle()
+                                    asciiART.LastBoss()
+                                    input('Press enter to continue...')
+                                    
 
 
                                     while player_health > 0 and boss_health > 0:
@@ -371,6 +408,7 @@ def boss_run():
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
+                                                asciiART.HellMaskTitle()
                                                 asciiART.LastBoss()
 
                                             elif player_roll == boss_roll:
@@ -378,6 +416,7 @@ def boss_run():
                                                 player_health = player_health - 2 
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
+                                                asciiART.HellMaskTitle()
                                                 asciiART.LastBoss()
 
                                             elif player_roll > boss_roll:
@@ -394,6 +433,7 @@ def boss_run():
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
+                                                asciiART.HellMaskTitle()
                                                 asciiART.LastBoss()
 
 
