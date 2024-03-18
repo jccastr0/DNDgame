@@ -24,7 +24,7 @@ def begin():
             #run = False
         else:
             
-            print("Begone, you're not worthy anyways. The world was overrun with monsters...darkness has won the battle.\n")
+            print("Begone, you're not worthy anyways. The world was overrun with monsters...darkness has won the battle.")
         run = False
 
         if intro_cutscene.lower() == 'yes':
