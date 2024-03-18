@@ -24,6 +24,7 @@ def druid():
     print("     |         `   ,'")
     print("    ,'          `  ;")
     print("__==' ___,    __/_")
+    #credit: https://www.asciiart.eu/people/occupations/knights
 
 
 def warrior():
@@ -46,6 +47,7 @@ def warrior():
     print("         \ /   | \___")
     print("         / |   \_____\ ")
     print("         `-'          ")
+    #credit: https://www.asciiart.eu/people/occupations/knights
 
 
 
@@ -66,7 +68,6 @@ def GameWin():
     print("  | | (_) | |_| |  \  /\  / | | | | |_|")
     print("  \_/\___/ \__,_|   \/  \/|_|_| |_| (_)\n")
 
-# Joker the Reaper (Once taken down early on in the game, he will come back as the final boss.)
 def FirstBoss():
     print("             ___          ")
     print("            /   \\        ")
@@ -84,18 +85,8 @@ def FirstBoss():
     print("           |       \\     ")
     print("           |        |     ")
     print("           |_________\    \n")
+    #credit: https://www.asciiart.eu/people/occupations/knights
 
-# Maka the Gryphon (Seems harmless at first, but once its health reaches a certain point itll go down with a fight.
-def SecondBoss():
-    print("   ____       ____")
-    print("  /    )     (    \ ")
-    print(" /    (  ^_^  )    \ ")
-    print("|  {   \('v')/   }  |")
-    print("|   {   /   \   }   |")
-    print("|_)(   /\   /\   )(_|")
-    print("|)  (_ | \|/  |_)  (|")
-    print("'     ""     ""         '\n")
-# 2nd phase to Maka
 def SecondBossPhaseTwo():
     print("                        ______")
     print("             ______,---'__,---'")
@@ -111,8 +102,10 @@ def SecondBossPhaseTwo():
     print("  __//   __;_`-  \ `;.__,;'")
     print("((,--,) (((,------;  `--' ")
     print("```  '   ```\n")
+    #credit: https://www.asciiart.eu/people/occupations/knights
 
-# Joker the Reaper's Final form.
+
+
 def LastBoss():
     print("                                         .""--..__")
     print("                     _                     []       ``-.._")
@@ -144,6 +137,7 @@ def LastBoss():
     print("/`                            |        ||    ")
     print("`-.___,-.      .-.        ___,'        (/    ")
     print("         `---'`   `'----'`")
+    #credit: https://www.asciiart.eu/people/occupations/knights
 
 
 
@@ -174,7 +168,7 @@ def squidward():
         print("       .`/  |     | |/`.")
         print("       |    |     |    |")
         print("       '._.'| .-. |'._.'")
-      
+        #credit: https://www.asciiart.eu/people/occupations/knights
 
 def cloud():
     print("     _.-^^---....,,--       ")
@@ -188,6 +182,7 @@ def cloud():
     print("       `-=#$%&%$#=-'   ")
     print("          | ;  :|     ")
     print(" _____.,-#%&$@%#&#~,._____")
+    #credit: https://www.asciiart.eu/people/occupations/knights
 
 
 
