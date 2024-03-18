@@ -17,7 +17,7 @@ def boss_run():
         
         player_health = 100
 
-        boss_health = 150
+        boss_health = 50
 
         print("You march onwards to the darkness.")
         time.sleep(3)
@@ -53,12 +53,12 @@ def boss_run():
 
             boss_roll = random.randint(1,15)
 
-            player_roll = random.randint(19,20)
+            player_roll = random.randint(1,20)
 
             crit_roll = random.randint (1,5)
 
             print("You roll a: "+ str(player_roll))
-            print("Maka the Gryffin rolls a: "+str(boss_roll)+'\n')
+            print("Maka the Gryphon rolls a: "+str(boss_roll)+'\n')
 
             if player_roll == 20:
                 crit = True
@@ -96,9 +96,9 @@ def boss_run():
                 boss_health = boss_health - player_roll
                 if crit == True:
                     if warrior_status == True:
-                        print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
+                        print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!\n")
                     elif wizard_status == True:
-                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
+                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!\n")
                 print("You did "+ str(player_roll) +" damage!")
                 print("Boss Health: " + str(boss_health))
                 print("Your Health: "+str(player_health)+'\n')
@@ -109,6 +109,7 @@ def boss_run():
 
         if player_health > boss_health:
             next = True
+            os.system('cls')
             print("\nYou have slain the evil that creeps!\n")
             time.sleep(2)
             asciiART.victory()
@@ -140,8 +141,8 @@ def boss_run():
                         time.sleep(3)
                         os.system('cls')
 
-                        print("From the depths of the sea, the ancient one rises.")
-                        time.sleep(2)
+                        print("From the depths of the sea, the ancient one rises with the ability to gain back health on parries.")
+                        time.sleep(4)
                         print("It pulls out his weapon...")
                         time.sleep(2)
                         print("THE CLARINET OF DEATH.")
@@ -153,7 +154,8 @@ def boss_run():
 
                         player_health = 100
 
-                        boss_health = 150
+                        boss_health = 80
+
                         asciiART.OctowardTitle()
 
                         asciiART.squidward()
@@ -176,7 +178,7 @@ def boss_run():
 
                             boss_roll = random.randint(1,20)
 
-                            player_roll = random.randint(19,20)
+                            player_roll = random.randint(1,20)
 
                             crit_roll = random.randint (1,5)
 
@@ -222,7 +224,7 @@ def boss_run():
 
                             elif player_roll == boss_roll:
                                 boss_health = boss_health + 10
-                                print("The enemy is strong...your attack is parried.\nThe enemy takes his chance to drink essence of the sea gaining 10 health!")
+                                print("The enemy is strong...your attack is parried.\nThe enemy takes his chance to drink essence of the sea gaining 10 health!\n")
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
@@ -235,9 +237,9 @@ def boss_run():
 
                                 if crit == True:
                                     if wizard_status == True:
-                                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
+                                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!\n")
                                     elif warrior_status == True:    
-                                        print("You channel your warrior spirit and swing your mighty sword...your attack is deadly and severely wounds the enemy!")
+                                        print("You channel your warrior spirit and swing your mighty sword...your attack is deadly and severely wounds the enemy!\n")
 
                                 print("You did "+ str(player_roll) +" damage!")
                                 print("Boss Health: " + str(boss_health))
@@ -249,13 +251,15 @@ def boss_run():
 
                         if player_health > boss_health:
                             next = True
+                            os.system("cls")
                             print("\nThe enemy's shriek pierces the air making the cave tremble...another enemy falls to your hand!\n")
                             time.sleep(2)
                             asciiART.victory()
-                            time.sleep(3)
+                            time.sleep(1)
                             input('Press enter to continue!')
                             os.system('cls')
                         else:
+                            os.system('cls')
                             next = False
                             # print('Dead')
                             # print("Game Over!")
@@ -270,7 +274,7 @@ def boss_run():
                                     import asciiART
                                     import time
                                     import os
-
+                                    #health_pot = True
                                     wizard_status = True
                                     warrior_status = True
 
@@ -308,7 +312,7 @@ def boss_run():
 
                                             boss_roll = random.randint(1,20)
 
-                                            player_roll = random.randint(19,20)
+                                            player_roll = random.randint(1,20)
 
                                             crit_roll = random.randint (1,5)
 
@@ -337,6 +341,14 @@ def boss_run():
                                                 print("Boss attacks and deals "+ str(boss_roll)+" damage.")
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
+                                                # if health_pot == True:
+                                                #      x = input('Do you want to use Health Pot? ')
+                                                #      if x.lower() == 'yes' or 'y':
+                                                #         player_health = player_health + 30
+                                                #         print("You have gained 30 health! You now have "+str(player_health)+' health!')
+                                                #         health_pot = False
+                                                #      elif x.lower() == 'no' or 'n':
+                                                #         print("Health Pot stored.")
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
                                                 asciiART.HellMaskTitle()
@@ -344,6 +356,14 @@ def boss_run():
 
                                             elif player_roll == boss_roll:
                                                 print("I applaud you, to be able to cancel out an attack like that, requires an unnerving will.\n")
+                                                # if health_pot == True:
+                                                #      x = input('Do you want to use Health Pot? ')
+                                                #      if x.lower() == 'yes' or 'y':
+                                                #         player_health = player_health + 30
+                                                #         print("You have gained 30 health! You now have "+str(player_health)+' health!')
+                                                #         health_pot = False
+                                                #      elif x.lower() == 'no' or 'n':
+                                                #         print('Health Pot stored.')
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
                                                 asciiART.HellMaskTitle()
@@ -353,12 +373,20 @@ def boss_run():
                                                 boss_health = boss_health - player_roll
                                                 if crit == True:
                                                     if warrior_status == True:
-                                                        print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
+                                                        print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!\n")
                                                     if wizard_status == True:
-                                                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
+                                                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!\n")
                                                 print("You did "+ str(player_roll) +" damage!")
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
+                                                # if health_pot == True:
+                                                #      x = input('Do you want to use Health Pot? ')
+                                                    #  if x.lower() == 'yes' or 'y':
+                                                    #     player_health = player_health + 30
+                                                    #     print("You have gained 30 health! You now have "+str(player_health)+'health!')
+                                                    #     health_pot = False
+                                                    #  elif x.lower() == 'no' or 'n':
+                                                    #     print("Health Pot stored")
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
                                                 asciiART.HellMaskTitle()
@@ -368,7 +396,7 @@ def boss_run():
                                     time.sleep(2)
                                     print('I have underestimated you...enough of the games...')
                                     time.sleep(3)
-                                    print("I'll unleash my secret ability from the hein era.")
+                                    print("I'll unleash my secret ability from the hein era...")
                                     time.sleep(3)
                                     os.system('cls')
                                     asciiART.cloud()
@@ -376,6 +404,8 @@ def boss_run():
                                     os.system('cls')
                                     asciiART.HellMaskTitle()
                                     asciiART.LastBoss()
+                                    time.sleep(2)
+                                    print('The boss gained the ability: Lifesteal! Every turn the boss steals 2 health from you!')
                                     input('Press enter to continue...')
                                     
 
@@ -384,7 +414,7 @@ def boss_run():
                                         
                                             boss_roll = random.randint(1,20)
 
-                                            player_roll = random.randint(19,20)
+                                            player_roll = random.randint(1,20)
 
                                             crit_roll = random.randint (1,5)
 
@@ -414,6 +444,12 @@ def boss_run():
                                                 print("Boss attacks and deals "+ str(boss_roll)+" damage.")
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
+                                                # if x.lower() == 'yes' or 'y':
+                                                #         player_health = player_health + 30
+                                                #         print("You have gained 30 health! You now have "+str(player_health)+' health!')
+                                                #         health_pot = False
+                                                # elif x.lower() == 'no' or 'n':
+                                                #         print("Health Pot stored.")
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
                                                 asciiART.HellMaskTitle()
@@ -422,6 +458,12 @@ def boss_run():
                                             elif player_roll == boss_roll:
                                                 print("I applaud you, to be able to cancel out an attack like that requires an unnerving will.\n")
                                                 player_health = player_health - 2 
+                                                # if x.lower() == 'yes' or 'y':
+                                                #         player_health = player_health + 30
+                                                #         print("You have gained 30 health! You now have "+str(player_health)+' health!')
+                                                #         health_pot = False
+                                                # elif x.lower() == 'no' or 'n':
+                                                #         print("Health Pot stored.")
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
                                                 asciiART.HellMaskTitle()
@@ -433,12 +475,18 @@ def boss_run():
                                                 player_health = player_health - 2 
                                                 if crit == True:
                                                     if warrior_status == True:
-                                                        print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
+                                                        print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!\n")
                                                     if wizard_status == True:
-                                                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
+                                                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!\n")
                                                 print("You did "+ str(player_roll) +" damage!")
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
+                                                # if x.lower() == 'yes' or 'y':
+                                                #         player_health = player_health + 30
+                                                #         print("You have gained 30 health! You now have "+str(player_health)+' health!')
+                                                #         health_pot = False
+                                                # elif x.lower() == 'no' or 'n':
+                                                #         print("Health Pot stored.")
                                                 input("Press enter to continue...\n")
                                                 os.system('cls')
                                                 asciiART.HellMaskTitle()
@@ -450,10 +498,12 @@ def boss_run():
 
 
                                     if player_health > boss_health:
+                                            os.system('cls')
                                             print("\nYou alone have achieved Enlightenment. You alone stand at the top.\nYou have conquered the dungeon.")
                                             asciiART.GameWin()
                                             next = False
                                     else:
+                                            os.system('cls')
                                             print('You are the fallen, the one who stood no chance.')
                                             # print("Game Over!")
                                             asciiART.GameOver()
