@@ -54,8 +54,8 @@ def boss_run():
 
             crit_roll = random.randint (1,5)
 
-            print(player_roll)
-            print(str(boss_roll))
+            print("Your roll..."+player_roll)
+            print("Maka the Gryffin rolls a..."+boss_roll)
 
             if player_roll == 20:
                 crit = True
@@ -158,8 +158,8 @@ def boss_run():
 
                             crit_roll = random.randint (1,5)
 
-                            print(player_roll)
-                            print(str(boss_roll))
+                            print("Your roll..."+player_roll)
+                            print('Octoward the Kraken rolls a...'+boss_roll)
 
                             if player_roll == 20:
                                 crit = True
@@ -199,7 +199,7 @@ def boss_run():
 
                             elif player_roll == boss_roll:
                                 boss_health = boss_health + 10
-                                print("The enemy is strong...your attack is parried and the enemy takes his chance to cast a spell and gain health!")
+                                print("The enemy is strong...your attack is parried.\nThe enemy takes his chance to drink essence of the sea gaining 10 health!")
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
