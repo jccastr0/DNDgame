@@ -12,6 +12,7 @@ import time
 
 def classes():
     import game_logic2
+    import time
     global player_class
 
     print("\nClasses: \n")
@@ -29,7 +30,9 @@ def classes():
     run=True 
 
     while run == True:
-
+        
+        import os
+        import time
         class_selection = input("\nWhat class do you choose challenger? ")
 
         
@@ -53,8 +56,12 @@ def classes():
     if player_class.lower() == "wizard":
         username =  input('\nWhat is your name traveler? ')
         print("\n"+username.title()+ " the wizard...hmm...may your magic guide the way.\n")
+        time.sleep(2)
+        os.system('cls')
     
     elif player_class.lower() == "warrior":
         username =  input('\nWhat is your name traveler? ')
         print("\n"+username.title()+' the warrior! May your sword never become dull or your bravery waiver.\n')
+        time.sleep(2)
+        os.system('cls')
     

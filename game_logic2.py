@@ -9,6 +9,7 @@ def boss_run():
         import player_core
         import asciiART
         import time
+        import os
 
         player_core.classes
 
@@ -52,11 +53,11 @@ def boss_run():
                 print("Boss Health: " + str(boss_health))
                 print("Your Health: "+str(player_health)+"\n")
                 input('Press enter to continue...\n')
-
+                os.system('cls')
             elif player_roll == boss_roll:
                 print("The enemy is strong...your attack is parried!\n")
                 input("Press enter to continue...\n")
-
+                os.system('cls')
             elif player_roll > boss_roll:
                 boss_health = boss_health - player_roll
                 if crit == True:
@@ -68,12 +69,13 @@ def boss_run():
                 print("Boss Health: " + str(boss_health))
                 print("Your Health: "+str(player_health)+'\n')
                 input("Press enter to continue...\n")
-                
+                os.system('cls')
 
         if player_health > boss_health:
             next = True
             print("\nYou have slain the evil that creeps!\n")
-           
+            input('Press Enter to Continue!')
+            os.system('cls')
         else:
             next = False
             print('Foolish mortal...your soul is mine.')
@@ -86,7 +88,7 @@ def boss_run():
                         import player_core
                         import asciiART
                         import time
-
+                        import os
                         
                         wizard_status = True
                         warrior_status = True
@@ -139,6 +141,7 @@ def boss_run():
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
+                                os.system('cls')
 
                             elif player_roll == boss_roll:
                                 boss_health = boss_health + 10
@@ -146,6 +149,7 @@ def boss_run():
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
+                                os.system('cls')
 
                             elif player_roll > boss_roll:
                                 boss_health = boss_health - player_roll
@@ -160,10 +164,13 @@ def boss_run():
                                 print("Boss Health: " + str(boss_health))
                                 print("Your Health: "+str(player_health)+"\n")
                                 input("Press enter to continue...\n")
+                                os.system('cls')
 
                         if player_health > boss_health:
                             next = True
                             print("\nThe enemy's shriek pierces the air making the cave tremble...another enemy falls to your hand!\n")
+                            input('Press enter to continue!')
+                            os.system('cls')
                         else:
                             next = False
                             print('Dead')
@@ -177,6 +184,7 @@ def boss_run():
                                     import player_core
                                     import asciiART
                                     import time
+                                    import os
 
                                     wizard_status = True
                                     warrior_status = True
@@ -224,16 +232,19 @@ def boss_run():
                                                 crit = False
                                                 wizard_status = False
                                                 warrior_status = False
+
                                             if player_roll < boss_roll:
                                                 player_health = player_health - boss_roll
                                                 print("Boss attacks and deals "+ str(boss_roll)+" damage.")
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
+                                                os.system('cls')
 
                                             elif player_roll == boss_roll:
                                                 print("I applaud you, to be able to cancel out an attack like that requires an unnerving will.\n")
                                                 input("Press enter to continue...\n")
+                                                os.system('cls')
 
                                             elif player_roll > boss_roll:
                                                 boss_health = boss_health - player_roll
@@ -246,6 +257,7 @@ def boss_run():
                                                 print("Boss Health: " + str(boss_health))
                                                 print("Your Health: "+str(player_health)+'\n')
                                                 input("Press enter to continue...\n")
+                                                os.system('cls')
                                                 
                                     print('Second phase...')
                                     print('I have underestimated you...enough games...')
