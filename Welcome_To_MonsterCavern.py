@@ -32,6 +32,8 @@ def begin():
         else:
             None
 
+def clear_terminal():
+    print("\n" * 40)
 
 
 
