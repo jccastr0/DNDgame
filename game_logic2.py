@@ -1,6 +1,6 @@
-    
+def boss_run():
 
-def boss_1():
+
         wizard_status = True
         warrior_status = True
         global win_var
@@ -12,7 +12,8 @@ def boss_1():
 
         player_core.classes
 
-
+        global next
+        
         player_health = 100
 
         boss_health = 150
@@ -21,7 +22,7 @@ def boss_1():
 
             boss_roll = random.randint(1,15)
 
-            player_roll = random.randint(19,20)
+            player_roll = random.randint(1,20)
 
             crit_roll = random.randint (1,5)
 
@@ -47,10 +48,14 @@ def boss_1():
                 
             if player_roll < boss_roll:
                 player_health = player_health - boss_roll
-                print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!\n")
+                print("Boss attacks and deals "+ str(boss_roll)+" damage.")
+                print("Boss Health: " + str(boss_health)+"\n")
+                print("Your Health: "+str(player_health))
+                input('Press enter to continue...')
 
             elif player_roll == boss_roll:
                 print("The enemy is strong...your attack is parried!\n")
+                input("Press enter to continue...")
 
             elif player_roll > boss_roll:
                 boss_health = boss_health - player_roll
@@ -60,179 +65,188 @@ def boss_1():
                     if wizard_status == True:
                         print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
                 print("You did "+ str(player_roll) +" damage!")
-                print("Boss Health: " + str(boss_health)+"\n")
+                print("Boss Health: " + str(boss_health))
                 print("Your Health: "+str(player_health))
+                input("Press enter to continue...")
                 
 
         if player_health > boss_health:
-            print("You have slain the evil that creeps!")
+            next = True
+            print("\nYou have slain the evil that creeps!\n")
            
         else:
+            next = False
             print('Foolish mortal...your soul is mine.')
             print("Game Over!")
-            
-        
-def boss_2():
 
-            import random
-            import player_core
-            import asciiART
-            import time
 
-            
-            wizard_status = True
-            warrior_status = True
-
-            player_health = 100
-
-            boss_health = 150
-
-            while player_health > 0 and boss_health > 0:
-
-                boss_roll = random.randint(1,20)
-
-                player_roll = random.randint(1,20)
-
-                crit_roll = random.randint (1,5)
-
-                print(player_roll)
-                print(str(boss_roll))
-
-                if player_roll == 20:
-                    crit = True
-                    if player_core.player_class == "wizard":
-                        wizard_status = True
-                        player_health = player_health + 10
+        while next == True:
                         
+                        import random
+                        import player_core
+                        import asciiART
+                        import time
 
-                    elif player_core.player_class == 'warrior':
+                        
+                        wizard_status = True
                         warrior_status = True
-                        player_roll = player_roll + crit_roll
-                else:
-                    crit = False
-                    wizard_status = False
-                    warrior_status = False
-                    
-                if boss_roll == 20:
 
-                    boss_crit = True
+                        player_health = 100
 
-                    boss_roll = boss_roll + 2
+                        boss_health = 150
 
-                    boss_health = boss_health + 5
-                else:
-                    boss_crit = False       
+                        while player_health > 0 and boss_health > 0:
 
-                if player_roll < boss_roll:
-                    player_health = player_health - boss_roll
-                    if boss_crit == True:
-                        ("The enemy is strong his power is immense...he extends his hands and absorbs your life energy and severely wounds you!")
-                    print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!")
-                    print("Boss Health: " + str(boss_health))
-                    print("Your Health: "+str(player_health)+"\n")
+                            boss_roll = random.randint(1,20)
 
-                elif player_roll == boss_roll:
-                    boss_health = boss_health + 10
-                    print("The enemy is strong...your attack is parried and the enemy takes his chance to cast a spell and gain health!")
-                    print("Boss Health: " + str(boss_health))
-                    print("Your Health: "+str(player_health)+"\n")
+                            player_roll = random.randint(1,20)
 
-                elif player_roll > boss_roll:
-                    boss_health = boss_health - player_roll
+                            crit_roll = random.randint (1,5)
 
-                    if crit == True:
-                        if wizard_status == True:
-                            print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
-                        if warrior_status == True:    
-                            print("You channel your warrior spirit and swing your mighty sword...your attack is deadly and severely wounds the enemy!")
+                            print(player_roll)
+                            print(str(boss_roll))
 
-                    print("You did "+ str(player_roll) +" damage!")
-                    print("Boss Health: " + str(boss_health))
-                    print("Your Health: "+str(player_health)+"\n")
-                    
+                            if player_roll == 20:
+                                crit = True
+                                if player_core.player_class == "wizard":
+                                    wizard_status = True
+                                    player_health = player_health + 10
+                                    
 
-            if player_health > boss_health:
-                print("The enemy's shriek pierces the air making the cave tremble...another enemy falls to your hand!")
-            else:
-                print('Foolish mortal...your soul is mine.')
-                print("Game Over!")
+                                elif player_core.player_class == 'warrior':
+                                    warrior_status = True
+                                    player_roll = player_roll + crit_roll
+                            else:
+                                crit = False
+                                wizard_status = False
+                                warrior_status = False
+                                
+                            if boss_roll == 20:
 
-def boss_3():
+                                boss_crit = True
 
-        global win_var
+                                boss_roll = boss_roll + 2
 
-        import random
-        import player_core
-        import asciiART
-        import time
+                                boss_health = boss_health + 5
+                            else:
+                                boss_crit = False       
 
-        wizard_status = True
-        warrior_status = True
+                            if player_roll < boss_roll:
+                                player_health = player_health - boss_roll
+                                if boss_crit == True:
+                                    ("The enemy is strong his power is immense...he extends his hands and absorbs your life energy and severely wounds you!")
+                                print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!")
+                                print("Boss Health: " + str(boss_health))
+                                print("Your Health: "+str(player_health)+"\n")
+                                input("Press enter to continue...")
 
-        # player_core.classes()
+                            elif player_roll == boss_roll:
+                                boss_health = boss_health + 10
+                                print("The enemy is strong...your attack is parried and the enemy takes his chance to cast a spell and gain health!")
+                                print("Boss Health: " + str(boss_health))
+                                print("Your Health: "+str(player_health)+"\n")
+                                input("Press enter to continue...")
 
-        asciiART.LastBoss()
-        print("At last, the final champion approaches. \nThose in the past who approached have fallen.\nConfidence alone won't prevail.")
-        print("'Joker the Slayer' approaches quickly!\n")
+                            elif player_roll > boss_roll:
+                                boss_health = boss_health - player_roll
 
+                                if crit == True:
+                                    if wizard_status == True:
+                                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
+                                    if warrior_status == True:    
+                                        print("You channel your warrior spirit and swing your mighty sword...your attack is deadly and severely wounds the enemy!")
 
-        player_health = 100
+                                print("You did "+ str(player_roll) +" damage!")
+                                print("Boss Health: " + str(boss_health))
+                                print("Your Health: "+str(player_health)+"\n")
+                                input("Press enter to continue...")
 
-        boss_health = 200
-
-        while player_health > 0 and boss_health > 0:
-
-            boss_roll = random.randint(1,20)
-
-            player_roll = random.randint(10,20)
-
-            crit_roll = random.randint (1,5)
-
-            print(player_roll)
-            print(str(boss_roll))
-
-            if player_roll == 20:
-                crit = True
-                if player_core.player_class == "wizard":
-                    wizard_status = True
-                    player_health = player_health + 10
-                    
-
-                elif player_core.player_class == 'warrior':
-                    warrior_status = True
-                    player_roll = player_roll + crit_roll
-                    
-
-            else:
-                crit = False
-                wizard_status = False
-                warrior_status = False
-            if player_roll < boss_roll:
-                player_health = player_health - boss_roll
-                print("Boss attacks and deals "+ str(boss_roll)+" damage.\nYou now have "+ str(player_health) +" health!\n")
-
-            elif player_roll == boss_roll:
-                print("I applaud you, to be able to cancel out an attack like that requires an unnerving will.\n")
-
-            elif player_roll > boss_roll:
-                boss_health = boss_health - player_roll
-                if crit == True:
-                    if warrior_status == True:
-                        print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
-                    if wizard_status == True:
-                        print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
-                print("You did "+ str(player_roll) +" damage!")
-                print("Boss Health: " + str(boss_health)+"\n")
-                print("Your Health: "+str(player_health))
-                
-
-        if player_health > boss_health:
-            print("\nYou alone have achieved Enlightenment. You alone stand at the top.\n                         You have conquered the dungeon.")
-            asciiART.GameWin()
-        else:
-            print('You are the fallen, the one who stood no chance.')
-            # print("Game Over!")
-            asciiART.GameOver()
+                        if player_health > boss_health:
+                            next = True
+                            print("\nThe enemy's shriek pierces the air making the cave tremble...another enemy falls to your hand!\n")
+                        else:
+                            next = False
+                            print('Dead')
+                            print("Game Over!")
 
 
+                        while next == True:
 
+
+                                    import random
+                                    import player_core
+                                    import asciiART
+                                    import time
+
+                                    wizard_status = True
+                                    warrior_status = True
+
+                                    # player_core.classes()
+
+                                    asciiART.LastBoss()
+                                    print("At last, the final champion approaches. \nThose in the past who approached have fallen.\nConfidence alone won't prevail.")
+                                    print("'Joker the Slayer' approaches quickly!\n")
+
+
+                                    player_health = 100
+
+                                    boss_health = 200
+
+                                    while player_health > 0 and boss_health > 0:
+
+                                        boss_roll = random.randint(1,20)
+
+                                        player_roll = random.randint(1,20)
+
+                                        crit_roll = random.randint (1,5)
+
+                                        print(player_roll)
+                                        print(str(boss_roll))
+
+                                        if player_roll == 20:
+                                            crit = True
+                                            if player_core.player_class == "wizard":
+                                                wizard_status = True
+                                                player_health = player_health + 10
+                                                
+
+                                            elif player_core.player_class == 'warrior':
+                                                warrior_status = True
+                                                player_roll = player_roll + crit_roll
+                                                
+
+                                        else:
+                                            crit = False
+                                            wizard_status = False
+                                            warrior_status = False
+                                        if player_roll < boss_roll:
+                                            player_health = player_health - boss_roll
+                                            print("Boss attacks and deals "+ str(boss_roll)+" damage.")
+                                            print("Boss Health: " + str(boss_health)+"\n")
+                                            print("Your Health: "+str(player_health))
+                                            input("Press enter to continue...")
+
+                                        elif player_roll == boss_roll:
+                                            print("I applaud you, to be able to cancel out an attack like that requires an unnerving will.\n")
+                                            input("Press enter to continue...")
+
+                                        elif player_roll > boss_roll:
+                                            boss_health = boss_health - player_roll
+                                            if crit == True:
+                                                if warrior_status == True:
+                                                    print("You channel your warrior spirit and swing your mighty sword...CRITICAL HIT!")
+                                                if wizard_status == True:
+                                                    print("You waive your staff and magic courses through your veins inundating the cave with glorious light...you gain 10 health back!")
+                                            print("You did "+ str(player_roll) +" damage!")
+                                            print("Boss Health: " + str(boss_health)+"\n")
+                                            print("Your Health: "+str(player_health))
+                                            input("Press enter to continue...")
+                                            
+
+                                    if player_health > boss_health:
+                                        print("\nYou alone have achieved Enlightenment. You alone stand at the top.\n                         You have conquered the dungeon.")
+                                        asciiART.GameWin()
+                                    else:
+                                        print('You are the fallen, the one who stood no chance.')
+                                        # print("Game Over!")
+                                        asciiART.GameOver()
